@@ -1,0 +1,4 @@
+mock/certs/*.crt
+mock/certs/*.key
+mock/certs/*.p12
+mock/certs/*.pkcs12

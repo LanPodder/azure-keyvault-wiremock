@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  vault-mock:
+    image: wiremock/wiremock
+    ports:
+      - "8443:8443"
+    volumes:
+      - ./mock/mappings:/home/wiremock/mappings
+      - ./mock/certs:/certs
+    command: "--disable-banner --https-port 8443 --verbose --https-keystore /certs/client-cert.pkcs12 --keystore-password password"
